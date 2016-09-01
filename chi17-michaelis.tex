@@ -184,15 +184,24 @@ In this paper, we report on the use of Minnie, a robot designed with these guide
 \subsection{Design of the Robot}
 Our initail design of the learning companion robot was guided by a desire to leverage the power of social interaction to promote interest and engagement in reading.  In our view a small, desktop humanoid robot with multiple methods of interaction and non-verbal expression would be appropriate.  We also felt that the robot should be built on a simple, modifiable, and inexpensive platform in order to model the type of constraints inherent in an affordable commericially available robot, and allow for hardware modifications.  This intuition led us to create the robot using a modified version of a freely available 3D printable robot design from Hello Robo \cite{Robo:2016}.  A more expensive pre-made robot such as the popular Nao platform, while possibly more reliable and polished, is not flexible in it's physical and hardward design.  
 
-The original robot from Hello Robo stands 13.5 inches and has a static torso without any movable appendages (see Figure 1).  The head and neck of the robot contain five servo controlled motions including: two closing eyelids, a pair of eyes that move laterally together, and vertical and horizontal head movements.  These motion options allowed us to create specific robot behaviors to provide a life-like feel (e.g. blinking eyes), and non-verbal communication (e.g. looking directly at a person).  Our modifications to the original robot included adding three pieces of hardware to the robot in order to facilitate human-robot communcation. First, we embedded a speaker in each of the ear pieces to allow the robot to utilize text-to-speech responses to the child.  Second, we included an RFID reader in the lower front of the robot to allow the child to respond to the robot with four color coded pre-programmed RFID cards.  Roughly, the cards allowed the child to \textit{say} yes/continue, no/stop, pause, and repeat to the robot.  Third, we added a USB camera to achieve two purposes: allowing video input to process facial recognition, which we used for facial tracking; and reading visual tags (AprilTags; \cite{}) placed within books
+The original robot from Hello Robo stands 13.5 inches and has a static torso without any movable appendages (see Figure 1).  The head and neck of the robot contain five servo controlled motions including: two closing eyelids, a pair of eyes that move laterally together, and vertical and horizontal head movements.  These motion options allowed us to create specific robot behaviors to provide a life-like feel (e.g. blinking eyes), and non-verbal communication (e.g. looking directly at a person).  Our modifications to the original robot included adding three pieces of hardware to the robot in order to facilitate human-robot communcation. First, we embedded a speaker in each of the ear pieces to allow the robot to utilize text-to-speech responses to the child.  Second, we included an RFID reader in the lower front of the robot to allow the child to respond to the robot with four color coded, pre-programmed RFID cards.  Roughly, the cards allow the child to \textit{say} yes/continue, no/stop, pause, and repeat to the robot.  Third, we added a USB camera to achieve two purposes: allowing video input to process facial recognition, which we used for facial tracking; and reading visual tags (AprilTags; \cite{}) placed within books.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\columnwidth]{figures/minnie}
+	\caption{Image of the learning compantion robot, Minnie, used in the study.  The camera is the red circle on the upper torso.  The RFID reader is below the camera. }~\label{fig:figure1}
+\end{figure}
 
 \subsection{Participants}
- We recruited families (N=8) from a mid-sized midwestern city to participate in the study. Not all family members were required to be present for the visit, and an average of \#\#\# number of individuals participated for each family. For each family, one child (mean age = \#\#\#; age range: 10 - 12; male = \#\#\# was asked to interact directly with the learning companion robot.
+ We recruited families (N=8) from a mid-sized midwestern city to participate in the study. Most often one parent and one child participated, while one family included two parents, and two families had one younger sibling present. For each family, one main child (mean age = 11.6; age range: 11 - 12; male = 5) was asked to interact directly with the learning companion robot.  All other family members were included in pre- and post-interviews.
  
+  
 \subsection{Data Sources}
-  Prior to participation, we asked parents to provide information about their child's typical reading schedule and reading ability.  Also, the child completed a short survey adapted from Michaelis \& Nathan \cite{Michaelis:2015} to assess their individual interest in reading.  The robot used this information
+  Prior to the in-home visit one parent for each family was asked to complete a questionairre to collect some information about the main child.  We asked the parent to describe, to the best of their knowledge, their child's reading ability, the amount of time their child spends reading non-school work each week, and their (the parent's) satisfaction with the amount of time their child spends reading.
+  
+  During the in-home visit, the main child was first asked to complete a short survey adapted from Michaelis \& Nathan \cite{Michaelis:2015} to assess their individual interest in reading.  The robot used this information
 
-\section{Typeset Text}
+\section{Findings}
 The styles contained in this document have been modified from the
 default styles to reflect ACM formatting conventions. For example,
 content paragraphs like this one are formatted using the Normal style.
@@ -203,6 +212,7 @@ To attempt to combat this, the \texttt{.cls} file has a command,
 prefer underfull lines with extra whitespace.  For more details on
 this, and info on how to control it more finely, check out
 {\url{http://www.economics.utoronto.ca/osborne/latex/PMAKEUP.HTM}}.
+
 
 \subsection{Title and Authors}
 
@@ -255,13 +265,7 @@ On pages beyond the first, start at the top of the page and continue
 in double-column format.  The two columns on the last page should be
 of equal length.
 
-\begin{figure}
-\centering
-  \includegraphics[width=0.9\columnwidth]{figures/sigchi-logo}
-  \caption{Insert a caption below each figure. Do not alter the
-    Caption style.  One-line captions should be centered; multi-line
-    should be justified. }~\label{fig:figure1}
-\end{figure}
+
 
 \subsection{References and Citations}
 
