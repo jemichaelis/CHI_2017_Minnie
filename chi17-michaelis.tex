@@ -220,7 +220,8 @@ During the interaction Minnie, the learning companion robot, uses face recogniti
 \begin{figure}
 	\centering
 	\includegraphics[width=1\columnwidth]{figures/Child-with-Minnie}
-	\caption{Image of a child working with Minnie during the introductory process. The child is holding a topic interest card, and has placed the Talking with Minnie book on the floor in front of Minnie. The books available for the child to read appear on the right of the image. An example of a green RFID card and a topic interest card with an April tag are superimposed on the top right of the figure.}~\label{fig:figure3}
+	\caption{Image of a child working with Minnie during the introductory process. The child is holding a topic interest card, and has placed the Talking with Minnie book on the floor in front of Minnie. The books available for the child to read appear on the right of the image. An example of a green RFID card and a topic interest card with an April tag are superimposed on the top right of the figure.}
+	\label{fig:figure3}
 \end{figure}
 
 After completing the initial instructional phase, Minnie begins the book selection and reading goal process. During this process, Minnie informs the child of a goal for reading time that day (design feature 2) -- for this study standardized at 20 minutes in length -- before each reading session, and begins tracking the time spent reading after a book is chosen. The learning companion robot will then check the user profile for a \textit{current book}, a previously read book that has not been finished. If a current book exists, Minnie will remind the child that this was what they were last reading and tell them the page number they were on (design feature 8). The child then has the option to continue or not. If there is no current book selection, Minnie suggests three books (of the 16 available) to the child that they may be interested in reading. The suggestions are based on an algorithm that uses the child's reading ability, interest in reading, usual time spent reading, and topic interests to determine ideal page length, reading level, and topical content of a book for the child (design feature 3). The program then assigns each book listed in the library a score based on the how well they match the ideal, and creates a priority cue. The top three books in the priority cue are offered to the child as suggested titles (design feature 7). The child may chose any book they wish (design feature 1), and scan an AprilTag on the back of the book they choose to indicate their selection. Then the software updates the user profile to store this as the child's current book, Minnie confirms the title of the book with the child, and the child is asked to begin reading on page one. This marks the beginning of the reading phase.
@@ -265,7 +266,26 @@ The general design of the learning companion robot interaction was programmed as
 Here we report on our findings from our technology probe during in-homes visits for our eight participating families.  First, we will describe what we found to be the relationship with reading for each of our main children: their habits, ability, and interest levels.  Families are numbered 1 through 8 with each member identified as ``MC'' for the main child in the study, ``P'' for the parent, and ``OC'' for another child present during interviews.  For example: the main child in family number seven is labeled as ``MC7'', and the parent for family 4 is labeled as ``P4''.  After describing the relationships with reading, we will then detail four main themes (see Figure XXX for a summary of each) that emerged from our grounded theory analysis.  Each theme is supported with evidence from interview and/or robot interaction data.  
 
 \subsection{Relationships with Reading}
-In recruiting for our study we initially intended to enroll children with a variety of interest levels in reading.  During a short, online, pre-screening questionnaire, we included a question that asked a parent to estimate the amount of time their child spent on reading each week.  We believed this would prove useful for inferring a relative interest level, but realized soon after we began our visits that this estimate was often not very accurate.  Thus, we did not make any enrollment selections based on pre-screening.  We used pre-interview descriptions of the child's view and habits towards reading to identify what phase of interest in reading they were likely in. While we do not believe that any of our participants are categorized in the first and lowest phase of interest development, \textit{triggered situational interest}, we classified 2 participants (MC1 and MC2) in phase two, \textit{maintained situational interest}, 3 (MC3, MC4, and MC5) in phase three, \textit{emerging individual interest}, and 3 (MC7, MC6, and MC8) in the highest and fourth phase, \textit{well-developed individual interest}.  These evaluations were supported by results from each child's FID-RS individual interest survey score.  We found that our phase two readers had the lowest and second lowest scores (4.5 and 5.4), the emerging individual interest readers fell in a range between 5.3 and 5.9, and the  interest readers had all three of the highest scores that ranged from 6.3 to 7.0 (the scale maximum).  Based on information gathered during our pre-interviews, we now turn to describing the children at each level of interest in reading.
+In recruiting for our study we initially intended to enroll children with a variety of interest levels in reading.  During a short, online, pre-screening questionnaire, we included a question that asked a parent to estimate the amount of time their child spent on reading each week.  We believed this would prove useful for inferring a relative interest level, but realized soon after we began our visits that this estimate was often not very accurate.  Thus, we did not make any enrollment selections based on pre-screening.  We used pre-interview descriptions of the child's view and habits towards reading to identify what phase of interest in reading they were likely in. While we do not believe that any of our participants are categorized in the first and lowest phase of interest development, \textit{triggered situational interest}, we classified 2 participants (MC1 and MC2) in phase two, \textit{maintained situational interest}, 3 (MC3, MC4, and MC5) in phase three, \textit{emerging individual interest}, and 3 (MC7, MC6, and MC8) in the highest and fourth phase, \textit{well-developed individual interest}.  These evaluations were supported by results from each child's FID-RS individual interest survey score.  We found that our phase two readers had the lowest and second lowest scores (4.5 and 5.4), the emerging individual interest readers fell in a range between 5.3 and 5.9, and the  interest readers had all three of the highest scores that ranged from 6.3 to 7.0 (the scale maximum).  Based on information gathered during our pre-interviews, we now turn to describing the children at each level of interest in reading. Table~\ref{tab:table1} provides a summary of the phase of interest for each participant.
+
+\begin{table}[]
+	\centering
+	\begin{tabular}{ccc}
+		{\small \textbf{Participant}} & {\small \textbf{Phase of Interest}}
+		& {\small \textbf{FID-RS Score}} \\
+		\midrule
+		MC1         & maintained situational    & 4.5    \\
+		MC2         & maintained situational    & 5.4    \\
+		MC3         & emerging indiviudual      & 5.4    \\
+		MC4         & emerging individual       & 5.3    \\
+		MC5         & emerging individual       & 5.9    \\
+		MC6         & well-developed individual & 6.7    \\
+		MC7         & well-developed individual & 7.0    \\
+		MC8         & well-developed individual & 6.3         
+	\end{tabular}
+	\caption{Phase of interest for main child participants.}
+	\label{tab:table1}
+\end{table}
 
 \subsubsection{Well-developed Individual Interest}
 Of the three well-developed individual interest readers, one, MC8, had an extreme interest in reading.  MC8 reads an exceptional amount (300 or more pages per day), and was described by his parent, P8, as ``off the charts''. He is such an avid reader that the local bookstore supplies him with ``a lot of advanced readers of books each month'' to have him ``give them an opinion on the books''. He described having very little need for a reading technology and struggled to find ideas of what one might do, because he feels no need to support improving his reading ability or motivation to read.   
@@ -273,85 +293,34 @@ Of the three well-developed individual interest readers, one, MC8, had an extrem
 Our two other high interest readers, MC6 and MC7, described themselves as having high reading ability, and that they were an ``avid reader'', and ``always loved to read'', respectively.  While they felt they were very good readers, they both indicated that they would like to continue to develop their reading ability.  To support this development, they both thought a technology might suggest new books for them to read.  MC6 also added a desire for a technology that would track their reading and provide some level of motivational support, while MC7 mentioned an interest in reading out loud.
 
 \subsubsection{Emerging Individual Interest}
-Our three moderate interest readers read between 30 to 60 minutes on an average day, and find that they can become engrossed in the right book.  However, they often struggle to find new books that interest them, and are continually seeking out new material.  For example MC4 said, ``I go out and try to find new books but I don't, like, find that many books appealing to me.''  This may be due to being reluctant to invest in reading new books, which leads them to re-read many of the books they already have several times.  They value reading as a way to learn, they believe they are ``okay'' readers and would like to ``practice and get better'', and they apprecaite ways of being supported in developing their ability.  They also recognize a need for some external motivational support, particularly when they do not connect with a book right away (even if it is just a ``nagging mom'').  
+Our three moderate interest readers read between 30 to 60 minutes on an average day, and find that they can become engrossed in the right book.  However, they often struggle to find new books that interest them, and are continually seeking out new material.  For example MC4 said, ``I go out and try to find new books but I don't, like, find that many books appealing to me.''  This may be due to being reluctant to invest in reading new books, which leads them to re-read many of the books they already have several times.  They value reading as a way to learn, they believe they are ``okay'' readers and would like to ``practice and get better'', and they apprecaite ways of being supported in developing their ability.  They also recognize a need for some external motivational support, particularly when they do not connect with a book right away (even if it is just a ``nagging mom'').  MC3 did not suggest anything he would want a reading technology to do.  However, both MC4 and MC5 would like a technology to help them understand and pronounce words while they read, and to give them feedback about the book as they read.  
   
 
 \subsubsection{Low Interest}
-While both will say they don't like reading, the two children in a maintained situational phase of interest exhibit an ability to read for somewhat large amounts of time when they really like a book.  However, they report very different amounts of time spent reading.  MC1 will read 30 minutes a day, because this is the goal her parent sets for her.  MC2
+While both will say they only ``like reading  a little'', the two children in a maintained situational phase of interest do enjoy reading when they really like a book.  However, they report different amounts of time spent reading.  MC1 will read 30 minutes a day, because this is the goal her parent sets for her.  MC2 reads very little outside of what is required for school. They both seem to feel that reading is something they should do more of, but don't prioritize this among other activities they prefer. Thus, they do not seek out reading unless required. For MC2 this conflict of feeling he should read more, but not really making the time for it appeared in our interview when describing that it is hard for him to find a book.  He said, ``Yeah I am like looking right now. Well I am trying to get time to look for books. Well I mean I have got a lot of time but...'' Here he seems to be indicating that while he feels he should be looking for an interesting book, he is not actively doing so.  Both children mention that tracking their reading with a log has been an effective method of motivation, although MC2 no longer uses any tracking, and both said this would be a welcome feature in a reading technology.  MC1 also added that she would like a technology that would ``Listen to [her], and tell [her] what it thought of the book or what [they] read.'' MC2 indicated that he would like a technology that could suppport understanding by adding illustrations to depict what was happening in the text.  Both of their parents mentioned motivatoinal support as something they would like a technology to offer.
 
-\subsection{Title and Authors}
+Having established the relationship of each child to reading, we will now begin describing themes that emerged from observations of the children interacting with the robot and their post-interviews. Figure 4 provides a summary of the three themes.
 
-Your paper's title, authors and affiliations should run across the
-full width of the page in a single column 17.8 cm (7 in.) wide.  The
-title should be in Helvetica or Arial 18-point bold.  Authors' names
-should be in Times New Roman or Times Roman 12-point bold, and
-affiliations in 12-point regular.  
+%\subsection{References and Citations}
 
-See \texttt{{\textbackslash}author} section of this template for
-instructions on how to format the authors. For more than three
-authors, you may have to place some address information in a footnote,
-or in a named section at the end of your paper. Names may optionally
-be placed in a single centered row instead of at the top of each
-column. Leave one 10-point line of white space below the last line of
-affiliations.
-
-\subsection{Abstract and Keywords}
-
-Every submission should begin with an abstract of about 150 words,
-followed by a set of Author Keywords and ACM Classification
-Keywords. The abstract and keywords should be placed in the left
-column of the first page under the left half of the title. The
-abstract should be a concise statement of the problem, approach, and
-conclusions of the work described. It should clearly state the paper's
-contribution to the field of HCI\@.
-
-\subsection{Normal or Body Text}
-
-Please use a 10-point Times New Roman or Times Roman font or, if this
-is unavailable, another proportional font with serifs, as close as
-possible in appearance to Times Roman 10-point. Other than Helvetica
-or Arial headings, please use sans-serif or non-proportional fonts
-only for special purposes, such as source code text.
-
-\subsection{First Page Copyright Notice}
-This template include a sample ACM copyright notice at the bottom of
-page 1, column 1.  Upon acceptance, you will be provided with the
-appropriate copyright statement and unique DOI string for publication.
-Accepted papers will be distributed in the conference
-publications. They will also be placed in the ACM Digital Library,
-where they will remain accessible to thousands of researchers and
-practitioners worldwide. See
-\url{http://acm.org/publications/policies/copyright_policy} for the
-ACM's copyright and permissions policy.
-
-\subsection{Subsequent Pages}
-
-On pages beyond the first, start at the top of the page and continue
-in double-column format.  The two columns on the last page should be
-of equal length.
-
-
-
-\subsection{References and Citations}
-
-Use a numbered list of references at the end of the article, ordered
-alphabetically by last name of first author, and referenced by numbers
-in
-brackets~\cite{Han:2005}.
-Your references should be published materials accessible to the
-public. Internal technical reports may be cited only if they are
-easily accessible (i.e., you provide the address for obtaining the
-report within your citation) and may be obtained by any reader for a
-nominal fee. Proprietary information may not be cited. Private
-communications should be acknowledged in the main text, not referenced
-(e.g., ``[Borriello, personal communication]'').
-
-References should be in ACM citation format:
-\url{http://acm.org/publications/submissions/latex_style}. This
-includes citations to internet
-resources~\cite{Han:2005}
-according to ACM format, although it is often appropriate to include
-URLs directly in the text, as above.
+%Use a numbered list of references at the end of the article, ordered
+%alphabetically by last name of first author, and referenced by numbers
+%in
+%brackets~\cite{Han:2005}.
+%Your references should be published materials accessible to the
+%public. Internal technical reports may be cited only if they are
+%easily accessible (i.e., you provide the address for obtaining the
+%report within your citation) and may be obtained by any reader for a
+%nominal fee. Proprietary information may not be cited. Private
+%communications should be acknowledged in the main text, not referenced
+%(e.g., ``[Borriello, personal communication]'').
+%
+%References should be in ACM citation format:
+%\url{http://acm.org/publications/submissions/latex_style}. This
+%includes citations to internet
+%resources~\cite{Han:2005}
+%according to ACM format, although it is often appropriate to include
+%URLs directly in the text, as above.
 
 
 % Use a numbered list of references at the end of the article, ordered
@@ -374,178 +343,179 @@ URLs directly in the text, as above.
 % communications should be acknowledged in the main text, not referenced
 % (e.g., ``[Robertson, personal communication]'').
 
-\begin{table}
-  \centering
-  \begin{tabular}{l r r r}
+%\begin{table}
+%  \centering
+%  \begin{tabular}{l r r r}
     % \toprule
-    & & \multicolumn{2}{c}{\small{\textbf{Test Conditions}}} \\
-    \cmidrule(r){3-4}
-    {\small\textit{Name}}
-    & {\small \textit{First}}
-      & {\small \textit{Second}}
-    & {\small \textit{Final}} \\
-    \midrule
-    Marsden & 223.0 & 44 & 432,321 \\
-    Nass & 22.2 & 16 & 234,333 \\
-    Borriello & 22.9 & 11 & 93,123 \\
-    Karat & 34.9 & 2200 & 103,322 \\
-    % \bottomrule
-  \end{tabular}
-  \caption{Table captions should be placed below the table. We
-    recommend table lines be 1 point, 25\% black. Minimize use of
-    table grid lines.}~\label{tab:table1}
-\end{table}
+%    & & \multicolumn{2}{c}{\small{\textbf{Test Conditions}}} \\
+%    \cmidrule(r){3-4}
+%    {\small\textit{Name}}
+%    & {\small \textit{First}}
+%      & {\small \textit{Second}}
+%    & {\small \textit{Final}} \\
+%    \midrule
+%    Marsden & 223.0 & 44 & 432,321 \\
+%    Nass & 22.2 & 16 & 234,333 \\
+%    Borriello & 22.9 & 11 & 93,123 \\
+%    Karat & 34.9 & 2200 & 103,322 \\
+%    % \bottomrule
+%  \end{tabular}
+%  \caption{Table captions should be placed below the table. We
+%    recommend table lines be 1 point, 25\% black. Minimize use of
+%    table grid lines.}
+%	\label{tab:table2}
+%\end{table}
 
-\section{Sections}
-
-The heading of a section should be in Helvetica or Arial 9-point bold,
-all in capitals. Sections should \textit{not} be numbered.
-
-\subsection{Subsections}
-
-Headings of subsections should be in Helvetica or Arial 9-point bold
-with initial letters capitalized.  For sub-sections and
-sub-subsections, a word like \emph{the} or \emph{of} is not
-capitalized unless it is the first word of the heading.
-
-\subsubsection{Sub-subsections}
-
-Headings for sub-subsections should be in Helvetica or Arial 9-point
-italic with initial letters capitalized.  Standard
-\texttt{{\textbackslash}section}, \texttt{{\textbackslash}subsection},
-and \texttt{{\textbackslash}subsubsection} commands will work fine in
-this template.
-
-\section{Figures/Captions}
-
-Place figures and tables at the top or bottom of the appropriate
-column or columns, on the same page as the relevant text (see
-Figure~\ref{fig:figure1}). A figure or table may extend across both
-columns to a maximum width of 17.78 cm (7 in.).
-
-
-
-Captions should be Times New Roman or Times Roman 9-point bold.  They
-should be numbered (e.g., ``Table~\ref{tab:table1}'' or
-``Figure~\ref{fig:figure1}''), centered and placed beneath the figure
-or table.  Please note that the words ``Figure'' and ``Table'' should
-be spelled out (e.g., ``Figure'' rather than ``Fig.'') wherever they
-occur. Figures, like Figure~\ref{fig:figure2}, may span columns and
-all figures should also include alt text for improved accessibility.
-Papers and notes may use color figures, which are included in the page
-limit; the figures must be usable when printed in black-and-white in
-the proceedings.
-
-The paper may be accompanied by a short video figure up to five
-minutes in length. However, the paper should stand on its own without
-the video figure, as the video may not be available to everyone who
-reads the paper.  
-
-\subsection{Inserting Images}
-When possible, include a vector formatted graphic (i.e. PDF or EPS).
-When including bitmaps,  use an image editing tool to resize the image
-at the appropriate printing resolution (usually 300 dpi).
-
-\section{Quotations}
-Quotations may be italicized when \textit{``placed inline''} (Anab,
-23F).
-
-\begin{quote}
-Longer quotes, when placed in their own paragraph, need not be
-italicized or in quotation marks when indented (Ramon, 39M).  
-\end{quote}
-
-\section{Language, Style, and Content}
-
-The written and spoken language of SIGCHI is English. Spelling and
-punctuation may use any dialect of English (e.g., British, Canadian,
-US, etc.) provided this is done consis- tently. Hyphenation is
-optional. To ensure suitability for an international audience, please
-pay attention to the following:
-
-\begin{itemize}
-\item Write in a straightforward style.
-\item Try to avoid long or complex sentence structures.
-\item Briefly define or explain all technical terms that may be
-  unfamiliar to readers.
-\item Explain all acronyms the first time they are used in your
-  text---e.g., ``Digital Signal Processing (DSP)''.
-\item Explain local references (e.g., not everyone knows all city
-  names in a particular country).
-\item Explain ``insider'' comments. Ensure that your whole audience
-  understands any reference whose meaning you do not describe (e.g.,
-  do not assume that everyone has used a Macintosh or a particular
-  application).
-\item Explain colloquial language and puns. Understanding phrases like
-  ``red herring'' may require a local knowledge of English.  Humor and
-  irony are difficult to translate.
-\item Use unambiguous forms for culturally localized concepts, such as
-  times, dates, currencies, and numbers (e.g., ``1--5--97'' or
-  ``5/1/97'' may mean 5 January or 1 May, and ``seven o'clock'' may
-  mean 7:00 am or 19:00). For currencies, indicate equivalences:
-  ``Participants were paid {\fontfamily{txr}\selectfont \textwon}
-  25,000, or roughly US \$22.''
-\item Be careful with the use of gender-specific pronouns (he, she)
-  and other gendered words (chairman, manpower, man-months). Use
-  inclusive language that is gender-neutral (e.g., she or he, they,
-  s/he, chair, staff, staff-hours, person-years). See the
-  \textit{Guidelines for Bias-Free Writing} for further advice and
-  examples regarding gender and other personal
-  attributes. Be particularly aware of
-  considerations around writing about people with disabilities.
-\item If possible, use the full (extended) alphabetic character set
-  for names of persons, institutions, and places (e.g.,
-  Gr{\o}nb{\ae}k, Lafreni\'ere, S\'anchez, Nguy{\~{\^{e}}}n,
-  Universit{\"a}t, Wei{\ss}enbach, Z{\"u}llighoven, \r{A}rhus, etc.).
-  These characters are already included in most versions and variants
-  of Times, Helvetica, and Arial fonts.
-\end{itemize}
-
-\section{Accessibility}
-The Executive Council of SIGCHI has committed to making SIGCHI
-conferences more inclusive for researchers, practitioners, and
-educators with disabilities. As a part of this goal, the all authors
-are asked to work on improving the accessibility of their
-submissions. Specifically, we encourage authors to carry out the
-following five steps:
-\begin{enumerate}
-\item Add alternative text to all figures
-\item Mark table headings
-\item Add tags to the PDF
-\item Verify the default language
-\item Set the tab order to ``Use Document Structure''
-\end{enumerate}
-For more information and links to instructions and resources, please
-see: \url{http://chi2016.acm.org/accessibility}.  The
-\texttt{{\textbackslash}hyperref} package allows you to create well tagged PDF files,
-please see the preamble of this template for an example.
-
-\section{Page Numbering, Headers and Footers}
-Your final submission should not contain footer or header information
-at the top or bottom of each page. Specifically, your final submission
-should not include page numbers. Initial submissions may include page
-numbers, but these must be removed for camera-ready. Page numbers will
-be added to the PDF when the proceedings are assembled.
-
-\section{Producing and Testing PDF Files}
-
-We recommend that you produce a PDF version of your submission well
-before the final deadline.  Your PDF file must be ACM DL
-Compliant. The requirements for an ACM Compliant PDF are available at:
-{\url{http://www.sheridanprinting.com/typedept/ACM-distilling-settings.htm}}.
-
-Test your PDF file by viewing or printing it with the same software we
-will use when we receive it, Adobe Acrobat Reader Version 10. This is
-widely available at no cost. Note that most
-reviewers will use a North American/European version of Acrobat
-reader, so please check your PDF accordingly.
-
-When creating your PDF from Word, ensure that you generate a tagged
-PDF from improved accessibility. This can be done by using the Adobe
-PDF add-in, also called PDFMaker. Select Acrobat | Preferences from
-the ribbon and ensure that ``Enable Accessibility and Reflow with
-tagged Adobe PDF'' is selected. You can then generate a tagged PDF by
-selecting ``Create PDF'' from the Acrobat ribbon.
+%\section{Sections}
+%
+%The heading of a section should be in Helvetica or Arial 9-point bold,
+%all in capitals. Sections should \textit{not} be numbered.
+%
+%\subsection{Subsections}
+%
+%Headings of subsections should be in Helvetica or Arial 9-point bold
+%with initial letters capitalized.  For sub-sections and
+%sub-subsections, a word like \emph{the} or \emph{of} is not
+%capitalized unless it is the first word of the heading.
+%
+%\subsubsection{Sub-subsections}
+%
+%Headings for sub-subsections should be in Helvetica or Arial 9-point
+%italic with initial letters capitalized.  Standard
+%\texttt{{\textbackslash}section}, \texttt{{\textbackslash}subsection},
+%and \texttt{{\textbackslash}subsubsection} commands will work fine in
+%this template.
+%
+%\section{Figures/Captions}
+%
+%Place figures and tables at the top or bottom of the appropriate
+%column or columns, on the same page as the relevant text (see
+%Figure~\ref{fig:figure1}). A figure or table may extend across both
+%columns to a maximum width of 17.78 cm (7 in.).
+%
+%
+%
+%Captions should be Times New Roman or Times Roman 9-point bold.  They
+%should be numbered (e.g., ``Table~\ref{tab:table2}'' or
+%``Figure~\ref{fig:figure1}''), centered and placed beneath the figure
+%or table.  Please note that the words ``Figure'' and ``Table'' should
+%be spelled out (e.g., ``Figure'' rather than ``Fig.'') wherever they
+%occur. Figures, like Figure~\ref{fig:figure2}, may span columns and
+%all figures should also include alt text for improved accessibility.
+%Papers and notes may use color figures, which are included in the page
+%limit; the figures must be usable when printed in black-and-white in
+%the proceedings.
+%
+%The paper may be accompanied by a short video figure up to five
+%minutes in length. However, the paper should stand on its own without
+%the video figure, as the video may not be available to everyone who
+%reads the paper.  
+%
+%\subsection{Inserting Images}
+%When possible, include a vector formatted graphic (i.e. PDF or EPS).
+%When including bitmaps,  use an image editing tool to resize the image
+%at the appropriate printing resolution (usually 300 dpi).
+%
+%\section{Quotations}
+%Quotations may be italicized when \textit{``placed inline''} (Anab,
+%23F).
+%
+%\begin{quote}
+%Longer quotes, when placed in their own paragraph, need not be
+%italicized or in quotation marks when indented (Ramon, 39M).  
+%\end{quote}
+%
+%\section{Language, Style, and Content}
+%
+%The written and spoken language of SIGCHI is English. Spelling and
+%punctuation may use any dialect of English (e.g., British, Canadian,
+%US, etc.) provided this is done consis- tently. Hyphenation is
+%optional. To ensure suitability for an international audience, please
+%pay attention to the following:
+%
+%\begin{itemize}
+%\item Write in a straightforward style.
+%\item Try to avoid long or complex sentence structures.
+%\item Briefly define or explain all technical terms that may be
+%  unfamiliar to readers.
+%\item Explain all acronyms the first time they are used in your
+%  text---e.g., ``Digital Signal Processing (DSP)''.
+%\item Explain local references (e.g., not everyone knows all city
+%  names in a particular country).
+%\item Explain ``insider'' comments. Ensure that your whole audience
+%  understands any reference whose meaning you do not describe (e.g.,
+%  do not assume that everyone has used a Macintosh or a particular
+%  application).
+%\item Explain colloquial language and puns. Understanding phrases like
+%  ``red herring'' may require a local knowledge of English.  Humor and
+%  irony are difficult to translate.
+%\item Use unambiguous forms for culturally localized concepts, such as
+%  times, dates, currencies, and numbers (e.g., ``1--5--97'' or
+%  ``5/1/97'' may mean 5 January or 1 May, and ``seven o'clock'' may
+%  mean 7:00 am or 19:00). For currencies, indicate equivalences:
+%  ``Participants were paid {\fontfamily{txr}\selectfont \textwon}
+%  25,000, or roughly US \$22.''
+%\item Be careful with the use of gender-specific pronouns (he, she)
+%  and other gendered words (chairman, manpower, man-months). Use
+%  inclusive language that is gender-neutral (e.g., she or he, they,
+%  s/he, chair, staff, staff-hours, person-years). See the
+%  \textit{Guidelines for Bias-Free Writing} for further advice and
+%  examples regarding gender and other personal
+%  attributes. Be particularly aware of
+%  considerations around writing about people with disabilities.
+%\item If possible, use the full (extended) alphabetic character set
+%  for names of persons, institutions, and places (e.g.,
+%  Gr{\o}nb{\ae}k, Lafreni\'ere, S\'anchez, Nguy{\~{\^{e}}}n,
+%  Universit{\"a}t, Wei{\ss}enbach, Z{\"u}llighoven, \r{A}rhus, etc.).
+%  These characters are already included in most versions and variants
+%  of Times, Helvetica, and Arial fonts.
+%\end{itemize}
+%
+%\section{Accessibility}
+%The Executive Council of SIGCHI has committed to making SIGCHI
+%conferences more inclusive for researchers, practitioners, and
+%educators with disabilities. As a part of this goal, the all authors
+%are asked to work on improving the accessibility of their
+%submissions. Specifically, we encourage authors to carry out the
+%following five steps:
+%\begin{enumerate}
+%\item Add alternative text to all figures
+%\item Mark table headings
+%\item Add tags to the PDF
+%\item Verify the default language
+%\item Set the tab order to ``Use Document Structure''
+%\end{enumerate}
+%For more information and links to instructions and resources, please
+%see: \url{http://chi2016.acm.org/accessibility}.  The
+%\texttt{{\textbackslash}hyperref} package allows you to create well tagged PDF files,
+%please see the preamble of this template for an example.
+%
+%\section{Page Numbering, Headers and Footers}
+%Your final submission should not contain footer or header information
+%at the top or bottom of each page. Specifically, your final submission
+%should not include page numbers. Initial submissions may include page
+%numbers, but these must be removed for camera-ready. Page numbers will
+%be added to the PDF when the proceedings are assembled.
+%
+%\section{Producing and Testing PDF Files}
+%
+%We recommend that you produce a PDF version of your submission well
+%before the final deadline.  Your PDF file must be ACM DL
+%Compliant. The requirements for an ACM Compliant PDF are available at:
+%{\url{http://www.sheridanprinting.com/typedept/ACM-distilling-settings.htm}}.
+%
+%Test your PDF file by viewing or printing it with the same software we
+%will use when we receive it, Adobe Acrobat Reader Version 10. This is
+%widely available at no cost. Note that most
+%reviewers will use a North American/European version of Acrobat
+%reader, so please check your PDF accordingly.
+%
+%When creating your PDF from Word, ensure that you generate a tagged
+%PDF from improved accessibility. This can be done by using the Adobe
+%PDF add-in, also called PDFMaker. Select Acrobat | Preferences from
+%the ribbon and ensure that ``Enable Accessibility and Reflow with
+%tagged Adobe PDF'' is selected. You can then generate a tagged PDF by
+%selecting ``Create PDF'' from the Acrobat ribbon.
 
 \section{Conclusion}
 
@@ -590,36 +560,36 @@ the grant from NSF (\#1234--2012--ABC). \textit{This whole paragraph is
 %
 \balance{}
 
-\section{References Format}
-Your references should be published materials accessible to the
-public. Internal technical reports may be cited only if they are
-easily accessible and may be obtained by any reader for a nominal
-fee. Proprietary information may not be cited. Private communications
-should be acknowledged in the main text, not referenced (e.g.,
-[Golovchinsky, personal communication]). References must be the same
-font size as other body text. References should be in alphabetical
-order by last name of first author. Use a numbered list of references
-at the end of the article, ordered alphabetically by last name of
-first author, and referenced by numbers in brackets. For papers from
-conference proceedings, include the title of the paper and the name of
-the conference. Do not include the location of the conference or the
-exact date; do include the page numbers if available. 
-
-References should be in ACM citation format:
-\url{http://www.acm.org/publications/submissions/latex_style}.  This
-includes citations to Internet
-resources according to ACM format, although it is often appropriate to include
-URLs directly in the text, as above. Example reference formatting for
-individual journal articles, articles in conference
-proceedings is given here.  See the examples of
-citations at the end of this document and in the accompanying
-\texttt{BibTeX} document. This formatting is a edited version of the
-format automatically generated by the ACM Digital Library
-(\url{http://dl.acm.org}) as ``ACM Ref.'' DOI and/or URL links are
-optional but encouraged as are full first names. Note that the
-Hyperlink style used throughout this document uses blue links;
-however, URLs in the references section may optionally appear in
-black.
+%\section{References Format}
+%Your references should be published materials accessible to the
+%public. Internal technical reports may be cited only if they are
+%easily accessible and may be obtained by any reader for a nominal
+%fee. Proprietary information may not be cited. Private communications
+%should be acknowledged in the main text, not referenced (e.g.,
+%[Golovchinsky, personal communication]). References must be the same
+%font size as other body text. References should be in alphabetical
+%order by last name of first author. Use a numbered list of references
+%at the end of the article, ordered alphabetically by last name of
+%first author, and referenced by numbers in brackets. For papers from
+%conference proceedings, include the title of the paper and the name of
+%the conference. Do not include the location of the conference or the
+%exact date; do include the page numbers if available. 
+%
+%References should be in ACM citation format:
+%\url{http://www.acm.org/publications/submissions/latex_style}.  This
+%includes citations to Internet
+%resources according to ACM format, although it is often appropriate to include
+%URLs directly in the text, as above. Example reference formatting for
+%individual journal articles, articles in conference
+%proceedings is given here.  See the examples of
+%citations at the end of this document and in the accompanying
+%\texttt{BibTeX} document. This formatting is a edited version of the
+%format automatically generated by the ACM Digital Library
+%(\url{http://dl.acm.org}) as ``ACM Ref.'' DOI and/or URL links are
+%optional but encouraged as are full first names. Note that the
+%Hyperlink style used throughout this document uses blue links;
+%however, URLs in the references section may optionally appear in
+%black.
 
 % BALANCE COLUMNS
 \balance{}
