@@ -191,6 +191,7 @@ Findings from human-robot interaction studies also provide several guidelines fo
  For this study, we first developed a learning companion robot, Minnie, based on the design guidelines discussed in the previous section. Following design research practices from prior work, such as work by Odom et. al \cite{Odom:2012}, we then conducted short in-home visits with families to use the learning companion robot as a \textit{technology probe} \cite{Hutchinson:2003} for discussion and reflection on how a reading technology might impact current reading habits in each home. Hutchinson et al. \cite{Hutchinson:2003} describe the technology probe approach as a method with three goals---understanding the user's needs and feelings about the technology, field-testing a technology, and reflection on new possibilities for the technology---that reflect our aims for this study. At this stage of development, our prior understanding of the intended user may not be sufficient, which may limit our view of how and what the learning companion robot should do. The introduction of the learning companion into the home may uncover unknown user needs and expectations as well as inspire new thoughts on and possibilities for the learning companion's use. We intend to explore these ideas to inform design modifications to the learning companion robot prior to empirical testing. Thus, our field testing of the robot is conducted concurrent to deep exploration of the design space through the eyes of the user. In essence, we must study the user, the technology, and their interaction all at the same time.
 
 % TODO: This last sentence is great, and you explain what you mean by it in the second half of the next paragraph, but perhaps make it a bit more clear?
+% DONE: Added one more sentence for clarity.
  
  We began the in-home visit by asking one child (referred to after as the \textit{main child}) to complete a short survey on individual interest in reading, followed by an interview (pre-) with the family. After the pre-interview, we introduced our learning companion robot to the family and asked the main child in the home to interact with it for a short period of time (approximately 30 minutes). Following the interaction, we asked the main child to complete another short survey, this time about their situational interest during the interaction. Finally, we completed a second interview (post-) with the family. In the spirit of using the technology as a probe, we did not limit the discussion or interaction with the robot to our preconceived ideas about how, when and where the learning companion should and would be used. Rather, we allowed families to explore ideas about how they would like to or would use this or another technology for reading. The following paragraphs describe this data collection method and subsequent analytic approach in more detail.
  
@@ -207,9 +208,10 @@ To perform the necessary computation and facilitate human-robot communication, w
 
 \subsection{Interaction Design of the Robot}
 
-The interaction design of our technology probe drew on design guidelines provided by research in interest development and human-robot interaction to support student engagement and interest in reading, utilizing the following design elements:
+The interaction design of our technology probe utilizes the eight guidelines, identified from research in interest development and human-robot interaction to support student engagement and interest in reading, in the following design elements:
 
-\begin{enumerate}[leftmargin=0ex,itemindent=5.25ex,itemsep=0.25ex]
+\begin{enumerate}[leftmargin=0ex,itemindent=5.25ex,itemsep=0.25ex]
+
 \item[$DE1$] Providing students with autonomy in choosing educational materials;
 \item[$DE2$] Setting and monitoring reading goals;
 \item[$DE3$] Providing materials that align with student topic interests and with which students believe they have the ability to be successful;
@@ -224,6 +226,8 @@ The interaction design of our technology probe drew on design guidelines provide
  In the description of the interaction design of the robot below, we will identify where design features are addressed in parentheses. We begin with a discussion of the general design of the robot interaction, followed by specific interaction details particular to this study.
 % TODO: One of the questions the readers are going to have is where these guidelines come from specifically. After reading the rest of the design section, it is probably best to integrate that information here where you list the design features.
 
+% NOTE: Not sure what you mean here?  These exact guidelines are layed out in the background section, and are repeated here and organized as a list for clarity.  Perhaps that is what is not clear.  So, I reworded the first sentence in the paragraph above.  Hopefully, that helps.
+
 \subsubsection{Design of the Interaction Flow}
 
 During the interaction, Minnie, the learning companion robot, uses face recognition to track the child's position and turn its head and eyes toward the child to establish eye contact (\textit{DE}6). However, to prevent long durations of eye contact from eliciting discomfort, the robot makes idle head and eye movements and engages in gaze aversion, and the robot also continually uses pre-scripted dialog based on an interaction flow, described below, which we developed through iterative design and testing.
@@ -237,10 +241,12 @@ During the interaction, Minnie, the learning companion robot, uses face recognit
 	\label{fig:introduction}
 \end{figure}
 
-\textit{Goal Setting --} After completing the initial introduction phase, Minnie begins the process of setting reading goals and selecting books. During this process, Minnie informs the child of a goal for reading time that day (\textit{DE}2)---for this study, standardized at 20 minutes in length---before each reading session, and begins tracking the time spent reading after a book is chosen. The learning companion robot will then check the user profile for a book, a previously read book that has not been finished. If a current book exists, Minnie will remind the child of what they were last reading and the page number they were on (\textit{DE}8). The child then has the option to continue or not. If the is no current book selection, Minnie suggests three books (out of a set of 16f the 16 available) to the child that the child may be interested in reading.
+\textit{Goal Setting --} After completing the initial introduction phase, Minnie begins the process of setting reading goals and selecting books. During this process, Minnie informs the child of a goal for reading time that day (\textit{DE}2)---for this study, standardized at 20 minutes in length---before each reading session, and begins tracking the time spent reading after a book is chosen. The learning companion robot will then check the user profile for a book, a previously read book that has not been finished. If a current book exists, Minnie will remind the child of what they were last reading and the page number they were on (\textit{DE}8). The child then has the option to continue or not. If the is no current book selection, Minnie suggests three books (out of a set of the 16 available) to the child that the child may be interested in reading.
 
-The robot's suggestions for books are based on an algorithm that uses the child's reading ability, interest in reading, usual time spent reading, and topic interests to recommend page length, reading level, and topical content of a book for the child (\textit{DE}3). The program then assigns each book listed in the library a score based on the how well they match the recommendation, and creates a priority cue. The top three books in the priority cue are offered to the child as suggested titles (\textit{DE}7). The child may chose any book they wish (\textit{DE}1), and scan the AprilTag placed on the back of the book they choose to indicate their selection. Then the robot updates the user profile to store the selected book as the child's current book;, Minnie confirms the title of the book with the child;, and the child is asked to begin reading on page one, which marks the beginning of the reading phase.
+The robot's suggestions for books are based on an selection method that uses the child's reading ability, interest in reading, usual time spent reading, and topic interests to recommend page length, reading level, and topical content of a book for the child (\textit{DE}3).  Books are first filtered based on reading ability and interest in reading, to include books at an appropriate reading level \textit{(DE3)}. We then use the child's average reading time to filter the books based on length (i.e. longer books for children who read for a longer duration).  Finally, the program then assigns each book listed in the library a score based on the how well they match the topic interests of the child, and creates a priority cue with the highest scoring book at the front of the cue. The top three books in the priority cue are offered to the child as suggested titles (\textit{DE}7). The child may chose any book they wish (\textit{DE}1), and scan the AprilTag placed on the back of the book they choose to indicate their selection. The robot then updates the user profile to store the selected book as the child's current book;, Minnie confirms the title of the book with the child;, and the child is asked to begin reading on page one, which marks the beginning of the reading phase.
 % TODO: The reader will want to know how this "algorithm" works to come up with the recommendation. Is it some kind of cost-based search?
+% DONE: I hope, see note below.  Changed to describing this as a selectoin "method" using a series of filters.
+% NOTE: Not that sophisticated really.  I added some more detail, but to explain it further will take a lot more space, so hopefully this is sufficient.  If the lexile score for the child is known we enter that into the user profile.  If not. we use Lexile estimates of a range of scores for each grade level.  If the child is described as reading at grade level we use the middle score, if they are above we use the lower limit and below we use the lower limit.  Once the user lexile is set, we add or subtract points based on their reading intereest (using our survey we set five levels of adjustments).  Theeeen, we look for books that are +/- 100 the adjusted lexile score.  The next filter figures that we would want kids to read about one book per week and we guess about 1 minute per page (book difficulty is already adjust for), so we do a quick calculation of idealPageLength = bookLength * time per page / readingTimePerDay * 7 (days in the week) .  This is definitely a back of the napkin formula.  
 
 \textit{Reading --} In the reading phase, the child is asked to read \textit{out loud} to Minnie (\textit{DE}5). Minnie is designed to make semi-randomized movements during the reading phase, which include blinking, moving its eyes, and small turns of its head in order to appear engaged in the reading (\textit{DE}4). As the child reads, AprilTags will appear roughly every three to six pages of each book, and the child is instructed to scan these tags when they encounter them. The tag ID is linked to a specific comment, written by our research team, related to what is currently happening in the book (\textit{DE}4). When a scan is received by Minnie, it blinks, makes a distinct \textit{beep}, and delivers the comment via text-to-speech. Each time a book tag is scanned, the user profile is updated to store that page as the current page. During the reading phase, the child may continue to read, scan the \textit{yellow} RFID to pause reading, or scan the \textit{red} RFID to quit reading. This phase continues until the child chooses to quit, or scans the last age of the book. At that point, Minnie enters the ``end- reading'' phase.
 
@@ -262,11 +268,13 @@ The previous section outlined the general interaction design of the learning com
 \subsection{Participants}
  We recruited families (N=8) from a mid-sized Midwestern city to participate in the study through flyers posted across coffee shops, grocery stores, and community centers and through word of mouth. Most often one parent and one child participated, while one family included two parents, and two families had one younger sibling present. For each family, one main child (mean age = 11.6; age range: 11--12; male = 5, female = 3) was asked to interact directly with the learning companion robot. All other family members were included in pre- and post-interviews. All parents involved in the study were asked to review and sign a consent form, and the children were asked to read and express their agreement with an assent form as a part of the study protocol reviewed and approved by the Institutional Review Board (IRB).
 % TODO: Is this last sentence accurate?
+% DONE: Yup!
 
 \subsection{Data Sources}
 During the course of our study, we collected data from three major sources. The first type of data source were three separate surveys. One survey was completed by parents as pre-visit questionnaire on their child's reading ability and habits. The other two were completed by the main child: an \textit{individual interest} in reading survey prior to working with the learning companion robot and a \textit{situational interest} survey after the interaction. The reliability of the individual and situational interest scales was measured using Cronbach's alpha, with an alpha value of 0.7 or greater indicating, by convention, a reasonably reliable construct \cite{Crocker:2009}. The second data source was from transcriptions of video recorded semi-structured interviews conducted before (pre-) and after (post-) the robot interaction. Both interviews were approximately 20 minutes in length, with the pre-interview (\textit{M} = 18.7 minutes, \textit{SD} = 2.3 minutes) being slightly longer than the post-interview (\textit{M} = \#\#\# minutes, \textit{SD} = \#\#\# minutes). Finally, the third data source comes from coding segments of video recordings made during the robot interaction of about 30 minutes (\textit{M} = \#\#\# minutes, \textit{SD} = \#\#\# minutes)). The following paragraphs discuss each data source in more detail.
   
-\subsubsection{Survey}Prior to the in-home visit, one parent for each family was asked to complete a questionnaire to collect overview information about the main child. We asked the parent to describe, to the best of their knowledge, their child's reading ability, the amount of time their child spends reading non-school work each week, their (the parent's) satisfaction with the amount of time their child spends reading as well as  basic demographic information, such as age and grade.
+\subsubsection{Survey}
+Prior to the in-home visit, one parent for each family was asked to complete a questionnaire to collect overview information about the main child. We asked the parent to describe, to the best of their knowledge, their child's reading ability, the amount of time their child spends reading non-school work each week, their (the parent's) satisfaction with the amount of time their child spends reading as well as  basic demographic information, such as age and grade.
  
 During the in-home visit, the main child was first asked to complete a 10-item pre-survey to assess the child's individual interest in reading. This survey was developed by rewording items from the Four-Phase Interest in Engineering Survey (FIDES) by developed by Michaelis and Nathan \cite{Michaelis:2015} with the reading motivation language in the Motivation for Reading Questionnaire developed by Wigfield and Guthrie \cite{Wigfield:1997}. The survey is comprised of Likert-style items, which asked students to rate their level of agreement with statements using a scale from 1 (\textit{strongly disagree}) to 7 (\textit{strongly agree}). Scores were calculated by averaging the scores from all items (\textit{M} = 5.8, \textit{SD} = 0.82). The high Cronbach's alpha ($\alpha$ = 0.81) indicates it has a high internal reliability.
  
@@ -280,6 +288,7 @@ We video recorded a semi-structured pre-interview with the family about their cu
 \subsection{Grounded Theory Analysis}
 All video data was coded and analyzed using a Grounded Theory \cite{Glaser:1967,Charmaz:2012} approach. In using a Grounded Theory analysis, we begin with an open coding period where informal codes were used to summarize significant idea units. Emerging themes from this open coding were then identified, defined as codes, and applied to the transcriptions as initial codes. After initial codes were identified and applied, the reliability of these codes was examined by comparing inter-rater reliability on 10\% of the data. The inter-rater reliability was very high between coders all video data (Cohen's $\kappa$ = 0.79). We then developed axial codes for each data set to further refine our coding scheme into related categories that were organized into four major themes. The findings below present details of each of the major themes and are followed by a discussion of our interpretation of these findings.
 % TODO: We might want to turn this into a general analysis section, as it is not clear this point how the survey data will be analyzed and how qual and quant analyses will be integrated. We could achieve that in a brief paragraph.
+% NOTE: I actually didn't find that the situational interest scale added all the much information. So, I think I might remove that from our reporting, especially since the post-interviews provided so much information about this.  We lose some of the multi-methods advantage, but it seems like it would just be a mess.
  
 \section{Findings}
 In this section, we report on the findings from our in-homes visits with eight participating families. We discuss four main themes that emerged from our analysis. We first describe what we found to be the relationship with reading for each of our main children: their habits, ability, and interest phase. We will then detail the three remaining themes that emerged from interaction with the robot. Each theme is supported with evidence from interview and/or robot-interaction data. Figure~\ref{fig:figure4} describes each of the major themes of our findings. 
@@ -370,12 +379,17 @@ In contrast to children referencing many different features of the robot interac
 Describing the interaction with Minnie as a way to develop reading ability was almost entirely done by phase 3 readers. Children in phase 2 and phase 4 each only mention improving reading ability once and focus more on liking the learning companion robot and how the interaction was helpful to the process of reading but not necessarily their ability to read. This behavior may indicate that the support provided by Minnie to improve reading ability is a good match for children who feel they are good readers but need a little help with both comprehension and reading skill. When we asked our families about improvements or changes they would make to the learning companion robot, those in phase 2 focused on changing the interaction to better support reading ability, while those in other phases mentioned ways of improving ease of use. 
 
 	\begin{quote}
-	 \textbf{R:} Ohh, ok, so there would that be something like... would you want if you were mispronouncing a word or like said something wrong would you want a robot to tell you that? Or would you rather the robot just kind of like let it go?
+	 \textbf{P1:} He likes to read with someone.
+	 
+	 \textbf{MC1:} Cause he doesn't know if he's gonna get the word right.
+	 
+	 \textbf{R:} Ohh, okay, so . . . If you were mispronouncing a word or like said something wrong would you want a robot to tell you that, or would you rather the robot just kind of like let it go?
 %	 TODO: The first sentence of the quote seems to be missing a word. Should we paraphrase? 
+% DONE: Better? I wanted to capture that my sugggestion was rephrasing what they said. My fix added lines though, maybe we paraphrase to save on length? 
 	 
 	 \textbf{P1:} ((shakes head ``yes''))
 	 
-	 \textbf{OC:} [She should] tell me that. 
+	 \textbf{OC1:} [She should] tell me that. 
 	 
 	 \textbf{R:} ((to MC1)) Would you wanna know?
 	 
@@ -395,8 +409,10 @@ In order to best promote reading engagement and interest, we deliberately design
 
 Notions about Minnie's feelings and personality came from both physical and software design. Specifically, Minnie's physical shape (e.g., enlarged rounded head and large eyes) seemed to influence perception of her personality, and it's speech capabilities that were tied to the specific context seemed to give the appearance of thoughts and feelings. 
 
-One feature of the learning companion robot design that had a significant impact on this impression of human characteristics appeared to be the continuous face tracking during the interaction. Not only was the robot designed to orient its head toward each face detected but to also include intervals of randomized movements in other directions. MC6 noted that it ``was staring at you,'' and while MC1 worked with Minnie, her sibling, sitting near them, noted that Minnie would point her head directly at each of them.
+One feature of the learning companion robot design that had a significant impact on this impression of human characteristics appeared to be the continuous face tracking during the interaction. Not only was the robot designed to orient its head toward each face detected but to also include intervals of randomized movements in other directions. MC6 noted that it felt like the robot was ``looking'' at her, and while MC1 worked with Minnie, her sibling, sitting near them, noted that Minnie would point her head directly at each of them and other places in the room.
 % TODO: The "was staring at you" comment is a bit confusing. Is it staring such that it's uncomfortable? And is "you" MC6?
+
+% DONE: Changed the quote to something she had said a second before.  This ought to make it clear that it wansn't in a creepy way, and that it was looking at her.
 
 	 \begin{quote}
 	 	 \textbf{OC1:} It like looked around the room and saw stuff, and it was looking at me and MC1 a lot.
@@ -410,6 +426,8 @@ Feeling that Minnie could understand was often attributed to what the learning c
 
 Based on prior work in human-robot interaction, we did anticipate the attribution of human characteristic to the robot.
 % TODO: Can we include a citation to the work we are referring to?
+% NOTE: This is a big question I have.  Should we include this in the background.  I don't want to introduce new lit this late in the paper, but I worry about adding things that would be construed as design guidelines since we are locked in at 8.  I have three good citations for this that I found last night, they are commented out in the background section. Thoughts?
+
 Based on guidelines from this literature for designing engaging social robots, we intentionally integrated aspects of social behavior in order to further our goals in designing the robot as a learning companion. While we thought of social interaction as a way to improve overall engagement with the robot, we were surprised to find that the social interaction tapped into a desire for social companionship while reading.
 
 \subsection{Social Companionship}
@@ -459,8 +477,9 @@ MC5 related the experience to the positive feelings they had while reading with 
 		
 		\textbf{R:} What did you like about it, what was nice?
 		 
-		 \textbf{MC5:} Um, like the it felt like it was another person listening and like I could communicate with her.
+		 \textbf{MC5:} Um, like the. . . It felt like it was another person listening and like I could communicate with her.
 %		 TODO: ...the [way] it...?
+% 		DONE: Just stammering at the beginning.  Should I could cut that?
 		 
 		 \textbf{R:} I see. Ok. And I know you said like with your family you guys sort of do that. Did you get that same sort of sense of like you and Minnie were sort of like reading together and sort of sharing the book?
 		 
@@ -474,8 +493,9 @@ MC6 found that the social companionship led to better reading.
 		 
 		 \textbf{R:} How did the listening to you, how did that make your reading different?
 		 
-		 \textbf{MC6} Um, maybe because (2 seconds) cause you actually tried to do really good. Instead of just like.
+		 \textbf{MC6} Um, maybe because. . . ((pause of 2 seconds)) cause you actually tried to do really good. Instead of just like.
 %		 TODO: Should "2 seconds" be in (( ))?
+% DONE: Yup, and I added some words to make it more clear
 		 
 		 \textbf{R:} So, you maybe did a better job of reading because Minnie was listening to you, you said?
 		 
